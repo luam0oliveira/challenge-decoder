@@ -1,0 +1,120 @@
+:root {
+    /* Colors */
+    --title-color: #343A40;
+    --alert-color: #67808E;
+    --default-color: #0A3871;
+    --white-color: #FFFFFF;
+    --background-color: #F3F5FC;
+    --subtitle-color: #495057;
+}
+
+* {
+    font-family: 'Inter', sans-serif;
+    ;
+}
+
+body{
+    background-color: var(--background-color);
+}
+
+header{
+    margin-bottom: 5rem;
+}
+
+#logo {
+    padding-top: 1.5rem;
+    width: 1.5rem;
+}
+
+.container {
+    padding: 0 1rem;
+}
+
+main {
+    padding-bottom: 2.5rem;
+}
+
+#input{
+    margin-bottom: 1rem;
+}
+
+#alert {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+#alert p {
+    color: var(--title-color);
+}
+
+#input-text {
+    width: 100%;
+    border: none;
+    resize: none;
+    margin-bottom: 4rem;
+    background: none;
+    font-size: 2rem;
+    min-height: 30vh;
+    color: var(--default-color);
+}
+
+#input-text::placeholder{
+    color: var(--default-color);
+}
+
+.button-container{
+    margin-bottom: 4rem;
+}
+
+.button {
+    padding: 1.5rem 0;
+    display: block;
+    text-align: center;
+    border-radius: 1.5rem;
+    text-decoration: none;
+    margin-bottom: 1rem;
+    cursor: pointer;
+}
+
+#encrypt {
+    background-color: var(--default-color);
+    color: var(--white-color);
+}
+
+.copy-decrypt {
+    border: 1px  solid var(--default-color);
+    color: var(--default-color);
+}
+
+#output{
+    background-color: var(--white-color);
+    padding: 2rem;
+    border-radius: 2rem;
+    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+}
+
+#no-output {
+    text-align: center;
+}
+
+#no-output h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--title-color);
+}
+
+#no-output p {
+    color: var(--subtitle-color);
+}
+
+
+#with-output{
+    display: none;
+    font-size: 1.5rem;
+}
+
+#output-text{
+    margin-bottom: 2rem;
+}

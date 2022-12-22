@@ -1,7 +1,19 @@
-const decrypted = document.querySelector('#decrypted')
-const encrypted = document.querySelector('#encrypted')
+const input = document.querySelector('#input-text')
 const btnEncrypt = document.querySelector('#encrypt')
 
+const noOutput = document.querySelector('#no-output')
+const withOutput = document.querySelector('#with-output')
+const outputText = document.querySelector('#output-text')
+
+function activeOutput() {
+    noOutput.style.display = 'none'
+    withOutput.style.display = 'block' 
+}
+
+function desactiveOutput() {
+    noOutput.style.display = 'block'
+    withOutput.style.display = 'none'
+}
 
 function encryptLetter(letter){
     let returnedString
@@ -37,11 +49,16 @@ function encryptText(text) {
 }
 
 function encryptListener() {
-    const encryptedText = encryptText(decrypted.value);
-    encrypted.value = encryptedText;
+    const encryptedText = encryptText(input.value.trim())
+    if (encryptedText.length == 0){
+        desactiveOutput()
+        return 0;
+    }
+    outputText.textContent = encryptedText
+    activeOutput()
 }
 
-function decryptLetter(letter ){
+function decryptLetter(letter){
     let returnedString
     let nextPosition = 0
 
@@ -82,6 +99,15 @@ function decryptText(text) {
 }
 
 function decryptListener() {
-    const decryptedText = decryptText(encrypted.value);
-    decrypted.value = decryptedText;
+    const decryptedText = decryptText(input.value.trim())
+    if (decryptedText.length == 0){
+        desactiveOutput()
+        return 0;
+    }
+    outputText.textContent = decryptedText
+    activeOutput()
+}
+
+function copy() {
+    navigator.clipboard.writeText(outputText.textContent)
 }
