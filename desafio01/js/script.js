@@ -1,13 +1,15 @@
 const input = document.querySelector('#input-text')
 const btnEncrypt = document.querySelector('#encrypt')
 
+const output = document.querySelector('#output')
 const noOutput = document.querySelector('#no-output')
 const withOutput = document.querySelector('#with-output')
 const outputText = document.querySelector('#output-text')
 
 function activeOutput() {
     noOutput.style.display = 'none'
-    withOutput.style.display = 'block' 
+    withOutput.style.display = 'flex'
+    output.classList.add(['content'])
 }
 
 function desactiveOutput() {
