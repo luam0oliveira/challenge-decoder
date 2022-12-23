@@ -68,7 +68,7 @@ function decrypt(subString){
     if (subString.startsWith('ai')) {
         letter = 'a'
         nextPosition = 1
-    } else if(letter.startsWith('enter')){
+    } else if(subString.startsWith('enter')){
         letter = 'e'
         nextPosition = 4
     } else if(subString.startsWith('imes')){
