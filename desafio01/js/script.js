@@ -60,37 +60,38 @@ function encryptListener() {
     activeOutput()
 }
 
-function decryptLetter(letter){
-    let returnedString
+
+function decrypt(subString){
+    let letter = ''
     let nextPosition = 0
 
-    if (letter == 'a') {
-        returnedString = 'a'
+    if (subString.startsWith('ai')) {
+        letter = 'a'
         nextPosition = 1
-    } else if(letter == 'e'){
-        returnedString = 'e'
+    } else if(letter.startsWith('enter')){
+        letter = 'e'
         nextPosition = 4
-    } else if(letter == 'i'){
-        returnedString = 'i'
+    } else if(subString.startsWith('imes')){
+        letter = 'i'
         nextPosition = 3
-    } else if(letter == 'o'){
-        returnedString = 'o'
+    } else if(subString.startsWith('ober')){
+        letter = 'o'
         nextPosition = 3
-    } else if(letter == 'u'){
-        returnedString = 'u'
+    } else if(subString.startsWith('ufat')){
+        letter = 'u'
         nextPosition = 3
     } else {
-        returnedString = letter
+        letter = subString[0]
     }
 
-    return [returnedString, nextPosition]
+    return [letter,nextPosition]
 }
 
 function decryptText(text) {
     let decryptedString = '';
 
     for(let i = 0; i < text.length; i++){
-        let decryptedLetter = decryptLetter(text[i], i)
+        let decryptedLetter = decrypt(text.substring(i, i+5))
         decryptedString += decryptedLetter[0]
         i += decryptedLetter[1]
     }
