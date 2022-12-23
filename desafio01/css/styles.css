@@ -78,14 +78,26 @@ main {
 }
 
 #encrypt {
+    border: 1px  solid var(--default-color);
     background-color: var(--default-color);
     color: var(--white-color);
+}
+
+#encrypt:hover {
+    opacity: 0.9;
+    transition: 0.4s;
 }
 
 .copy-decrypt {
     border: 1px  solid var(--default-color);
     color: var(--default-color);
     font-size: 1rem;
+}
+
+.copy-decrypt:hover {
+    background-color: var(--default-color);
+    color: var(--white-color);
+    transition: 0.4s all;
 }
 
 #output{
