@@ -30,33 +30,32 @@
             <div class="input-buttons">
 
                 <div id="input">
-                    <textarea name="descrypted" id="input-text"
-                        placeholder="Digite teu texto"></textarea>
+                    <textarea name="descrypted" id="input-text" placeholder="Digite teu texto"></textarea>
                     <div id="alert">
                         <img src="img/alert.svg" alt="Ícone de exclamação">
                         <p>Apenas letras minúsculas e sem acento.</p>
                     </div>
                 </div>
-    
+
                 <div class="button-container">
                     <a class="button" onclick="encryptListener()" id="encrypt">Criptografar</a>
                     <a class="button copy-decrypt" onclick="decryptListener()" id="decrypt">Descriptografar</a>
                 </div>
             </div>
-            
-                <div id="output">
-                    <div id="no-output">
-                        <img src="img/searchimg.svg" alt="Menina observando">
-                        <h2>Nenhuma mensagem encontrada</h2>
-                        <p>Digite um texto que você deseja criptografar ou descriptografar</p>
-                    </div>
-    
-                    <div id="with-output">
-                        <p id="output-text"></p>
-                        <a class="button copy-decrypt" onclick="copy()" id="copy">Copiar</a>
-                    </div>
+
+            <div id="output">
+                <div id="no-output">
+                    <img src="img/searchimg.svg" alt="Menina observando">
+                    <h2>Nenhuma mensagem encontrada</h2>
+                    <p>Digite um texto que você deseja criptografar ou descriptografar</p>
                 </div>
-            
+
+                <div id="with-output">
+                    <p id="output-text"></p>
+                    <a class="button copy-decrypt" onclick="copy()" id="copy">Copiar</a>
+                </div>
+            </div>
+
         </div>
     </main>
 </body>
