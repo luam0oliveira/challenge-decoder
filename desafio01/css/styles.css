@@ -51,8 +51,11 @@ main {
     width: 100%;
     border: none;
     resize: none;
+    border-radius: 0.5rem;
+    outline: none;
     margin-bottom: 4rem;
-    background: none;
+    background: white;
+    padding: 1rem;
     font-size: 2rem;
     min-height: 30vh;
     color: var(--default-color);
