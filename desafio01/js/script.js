@@ -61,44 +61,22 @@ function encryptListener() {
 }
 
 
-function decrypt(subString){
-    let letter = ''
-    let nextPosition = 0
+function decrypt(string){
+    let decryptedString = string.replace(/ai/g,'a')
+    decryptedString = decryptedString.replace(/enter/g,'e')
+    decryptedString = decryptedString.replace(/imes/g,'i')
+    decryptedString = decryptedString.replace(/ober/g,'o')
+    decryptedString = decryptedString.replace(/ufat/g,'u')
 
-    if (subString.startsWith('ai')) {
-        letter = 'a'
-        nextPosition = 1
-    } else if(subString.startsWith('enter')){
-        letter = 'e'
-        nextPosition = 4
-    } else if(subString.startsWith('imes')){
-        letter = 'i'
-        nextPosition = 3
-    } else if(subString.startsWith('ober')){
-        letter = 'o'
-        nextPosition = 3
-    } else if(subString.startsWith('ufat')){
-        letter = 'u'
-        nextPosition = 3
-    } else {
-        letter = subString[0]
-    }
-
-    return [letter,nextPosition]
+    return decryptedString
 }
 
 function decryptText(text) {
-    let decryptedString = '';
+    let decryptedText = decrypt(text)
 
-    for(let i = 0; i < text.length; i++){
-        let decryptedLetter = decrypt(text.substring(i, i+5))
-        decryptedString += decryptedLetter[0]
-        i += decryptedLetter[1]
-    }
+    console.log(decryptedText)
 
-    console.log(decryptedString)
-
-    return decryptedString;
+    return decryptedText;
 }
 
 function decryptListener() {
