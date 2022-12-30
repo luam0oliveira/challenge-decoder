@@ -7,7 +7,7 @@
 
 ## Sobre o desafio
 
-Foi um desafio desenvolvido durante a trilha 01 do curso [ONE](https://www.oracle.com/br/education/oracle-next-education/) (Oracle Next Education). Repositório base para o desafio: [Decodificador de texto](https://github.com/alura-challenges/challenge-one-decodificador-br).
+Foi um desafio desenvolvido durante a trilha 01 do curso [ONE](https://www.oracle.com/br/education/oracle-next-education/) (Oracle Next Education). Repositório base para o desafio: [Decodificador de texto](https://github.com/alura-challenges/challenge-one-decodificador-br).  
 Para ver o resultado final do projeto direto do teu navegador, acesse: [ONE - Desafio 01](https://luam0oliveira.github.io/challenge-decoder/)
 
 ## Instruções
